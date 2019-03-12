@@ -8,8 +8,11 @@
 </head>
 <body>
     <script type="text/javascript">
-//tell the user to pick a letter
 
+//needs and if/else statment
+//needs
+
+//tell the user to pick a letter
 //if user chooses right they score a point
 //if user score 10 points they win
 //if user chooses wrong give them 8 more chances to choose right choice
@@ -23,23 +26,45 @@
 //game must restart after win or lost
 
 
-
-//use onupkey function to evaluate user choice
-document.onkeyup = function(event) {
-
-    var userguess = string.fromCharCode(event.keyCode.
+//need a variable
+var computerChoices = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
 
 
+document.onkeyup = function() {
+    var userguess = String.fromCharCode(event.keyCode). toLowerCase();
 
+    console.log("userguess="+userguess);
 
+    const computerGuess = computerChoices [Math.floor(Math.random()*computerChoices.length)];
 
-
-
-
+    console.log(computerGuess);
 
 
 };
+
+
+//if userguess("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"){
+
+
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
     </script>
     
 </body>
