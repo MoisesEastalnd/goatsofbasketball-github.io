@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+
+<div id= "guessletter">
+    <p>Press any Letter key to Start Game</p>
+</div>
+
     <script type="text/javascript">
 
 //needs and if/else statment
@@ -27,27 +32,67 @@
 
 
 //need a variable
-var computerChoices = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var computerChoices = ["a","e","i","o","u","y"];
 
+var wins = 0;
+var losses = 0;
+var tries = 0;
+
+var score = ["wins","losses","tries"];
+
+var length = score.length
+console.log(length);
+for (var i=0; i<score.length; i++) {
+
+}
+
+
+    
 
 
 document.onkeyup = function() {
-    var userguess = String.fromCharCode(event.keyCode). toLowerCase();
-
-    console.log("userguess="+userguess);
+    var userguess = String.fromCharCode(event.keyCode).toLowerCase();
+    
 
     const computerGuess = computerChoices [Math.floor(Math.random()*computerChoices.length)];
+    
+    
+  
+    if (userguess === computerGuess){
+        wins++;
+            
 
-    console.log(computerGuess);
+        
+} else (userguess > computerGuess)
+        losses++;
+        
+    
+    {
+    
+    
+    
+
+
+        
+
+
+
+}
+
+var html = "<p>Press any Letter key to Start Game</p>" +
+"<p>Wins:" + wins + "</p>" +
+"<p>Losses:" + losses + "</p>"+
+"<p>Tries:" + tries + "</p>";
+
+
+    document.querySelector('#guessletter').innerHTML = html;
+
 
 
 };
 
 
-//if userguess("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"){
 
-
-//}
 
 
 
